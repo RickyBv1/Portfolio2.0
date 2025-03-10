@@ -144,6 +144,14 @@
       margin: 0 0 30px;
       max-width: 90%;
       line-height: 18px;
+
+      &.mb8 {
+        margin-bottom: 8px;
+      }
+
+      &.mt20 {
+        margin-top: 20px;
+      }
     }
 
     button {
