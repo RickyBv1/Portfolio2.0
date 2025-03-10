@@ -14,9 +14,9 @@ export class AppComponent {
 
   isShowMenu:boolean = true;
 
-  isHome:boolean = false;
-  isAboutMe:boolean = false;
-  isProjects:boolean = false;
-  isContact:boolean = false;
+  view = 'isHome';
+  handleGoToMenu(name: any) {
+    this.view = name;
 
+  }
 }

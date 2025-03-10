@@ -5,8 +5,8 @@
 
       <div class="content">
         <h4>HELLO</h4>
-        <h1>I'm Ricardo</h1>
-        <p>Developer<br>From Ecuador</p>
+        <h1 [ngClass]="{ 'small' : view != 'isHome' }">I'm Ricardo</h1>
+        <p>Front-end developer<br>From Ecuador<br>Living in New York</p>
         <button>Contact Me</button>
       </div>
       <div class="social-media">
@@ -17,32 +17,38 @@
       </div>
     </div>
     <div fxFlex="100%" class="center">
-      <ng-container *ngIf="isHome">
-
-      </ng-container>
-      <ng-container *ngIf="isAboutMe">
-
-      </ng-container>
-      <ng-container *ngIf="isProjects">
-
-      </ng-container>
-      <ng-container *ngIf="isContact">
-
-      </ng-container>
-      <div class="profile-pic"></div>
+      <ng-container *ngIf="view === 'isHome'">
+        <div class="profile-pic"></div>
       <div class="p40">
         <p>Junior Web Developer | Passionate About UX & Aesthetics
           <br>I'm a junior web developer with experience in JavaScript, TypeScript, Angular, HTML, and CSS. I love creating intuitive and visually appealing web experiences. Always eager to learn new technologies, my goal is to become a senior full-stack developer. Outside of coding, I enjoy video games and downhill mountain biking.
           <br>Let's build something great together! 🚀</p>
           <button>Projects</button>
       </div>
+      </ng-container>
+      <ng-container *ngIf="view === 'isAboutMe'">
+        <div class="p40">
+          <h4>ABOUT ME</h4>
+          <p>Junior Web Developer | Passionate About UX & Collaborative Growth</p>
+          <p>I'm a junior web developer with experience in JavaScript, TypeScript, Angular, HTML, and CSS. As a self-taught programmer, I've worked on a few projects where I focused on creating clean, intuitive, and visually appealing user experiences. I enjoy the challenge of turning ideas into interactive and responsive web applications, always aiming for a balance between aesthetics and functionality.</p>
+          <p>I thrive in collaborative environments, valuing the opportunity to learn from experienced developers while fostering a positive and relaxed workspace. I believe that teamwork and continuous learning are key to professional growth. Although my backend experience is minimal, I'm eager to expand my knowledge and take on new challenges that will help me become a well-rounded full-stack developer.</p>
+          <p>For me, coding should be as enjoyable as it is challenging. While problem-solving and debugging can be tough at times, I believe in making the process fun and engaging. Whether I'm refining UI designs, optimizing performance, or experimenting with new technologies, I approach development with curiosity and enthusiasm.</p>
+          <p>Beyond coding, I'm always looking for new challenges both on and off the screen. I'm passionate about video games, where I enjoy strategy, creativity, and problem-solving in a different way. Additionally, I love downhill mountain biking, pushing my limits while navigating fast descents and technical terrain. Both hobbies fuel my love for challenges, adaptability, and constant improvement—values that I bring into my work as a developer.</p>
+        </div>
+      </ng-container>
+      <ng-container *ngIf="view === 'isProjects'">
+        projects
+      </ng-container>
+      <ng-container *ngIf="view === 'isContact'">
+        contact
+      </ng-container>
     </div>
     <div fxFlex="100px" class="menu" *ngIf="isShowMenu">
       <div class="menu-items">
-        <a>HOME</a>
-        <a>ABOUT ME</a>
-        <a>PROJECTS</a>
-        <a>CONTACT</a>
+        <a [ngClass]="{ 'active' : view === 'isHome' }" (click)="handleGoToMenu('isHome')">HOME</a>
+        <a [ngClass]="{ 'active' : view === 'isAboutMe' }" (click)="handleGoToMenu('isAboutMe')">ABOUT ME</a>
+        <a [ngClass]="{ 'active' : view === 'isProjects' }" (click)="handleGoToMenu('isProjects')">PROJECTS</a>
+        <a [ngClass]="{ 'active' : view === 'isContact' }" (click)="handleGoToMenu('isContact')">CONTACT</a>
       </div>
     </div>
     <a class="menu-icon"><img src="icons/menu.png" alt="menu" class="hamburger" width="30px" (click)="isShowMenu = !isShowMenu"></a>

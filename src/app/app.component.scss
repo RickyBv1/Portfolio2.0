@@ -78,6 +78,12 @@
           line-height: 105px;
           white-space: nowrap;
           text-shadow: 5px 3px #0c367e;
+
+          &.small {
+            font-size: 60px;
+            line-height: 60px;
+            white-space: normal;
+          }
         }
 
         p {
@@ -122,7 +128,7 @@
 
       &::after {
         content: '';
-        background: #0c367e2f;
+        background: #0c367e1c;
         position: absolute;
         left: 0;
         top: 0;
@@ -149,7 +155,6 @@
       color: #fff;
       font-weight: 600 ;
     }
-
   }
 
   .menu-icon {
