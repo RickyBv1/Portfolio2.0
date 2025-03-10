@@ -10,26 +10,41 @@
         <button>Contact Me</button>
       </div>
       <div class="social-media">
-        <img src="icons/github.png" width="24px" alt="github">
-        <img src="icons/instagram.png" width="24px" alt="instagram">
-        <img src="icons/X-logo.png" width="24px" alt="X-logo">
-        <img src="icons/facebook.png" width="24px" alt="facebook">
+        <a href="https://github.com/RickyBv1" target="_blank"><img src="icons/github.png" width="24px" alt="github"></a>
+        <a href="https://www.instagram.com/rickycortes24/" target="_blank"><img src="icons/instagram.png" width="24px" alt="instagram"></a>
+        <a href="https://x.com/Bv1Ricky" target="_blank"><img src="icons/X-logo.png" width="24px" alt="X-logo"></a>
+        <a href="https://www.facebook.com/ricardo.cortesrugbier" target="_blank"><img src="icons/facebook.png" width="24px" alt="facebook"></a>
       </div>
     </div>
     <div fxFlex="100%" class="center">
+      <ng-container *ngIf="isHome">
+
+      </ng-container>
+      <ng-container *ngIf="isAboutMe">
+
+      </ng-container>
+      <ng-container *ngIf="isProjects">
+
+      </ng-container>
+      <ng-container *ngIf="isContact">
+
+      </ng-container>
       <div class="profile-pic"></div>
       <div class="p40">
         <p>Junior Web Developer | Passionate About UX & Aesthetics
-          <br>I'm a junior web developer with experience in JavaScript, TypeScript, Angular, HTML, and CSS. I love creating intuitive and visually appealing web experiences. Always eager to learn new technologies, my goal is to become a senior full-stack developer. Outside of coding, I enjoy video games and downhill mountain biking.</p>
+          <br>I'm a junior web developer with experience in JavaScript, TypeScript, Angular, HTML, and CSS. I love creating intuitive and visually appealing web experiences. Always eager to learn new technologies, my goal is to become a senior full-stack developer. Outside of coding, I enjoy video games and downhill mountain biking.
+          <br>Let's build something great together! 🚀</p>
           <button>Projects</button>
       </div>
     </div>
-    <div fxFlex="100px" class="menu">
-      <img src="icons/menu.png" alt="menu" width="20px" class="hamburger">
-      <a>HOME</a>
-      <a>ABOUT ME</a>
-      <a>PROJECTS</a>
-      <a>CONTACT</a>
+    <div fxFlex="100px" class="menu" *ngIf="isShowMenu">
+      <div class="menu-items">
+        <a>HOME</a>
+        <a>ABOUT ME</a>
+        <a>PROJECTS</a>
+        <a>CONTACT</a>
+      </div>
     </div>
+    <a class="menu-icon"><img src="icons/menu.png" alt="menu" class="hamburger" width="30px" (click)="isShowMenu = !isShowMenu"></a>
   </div>
 </div>

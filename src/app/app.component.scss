@@ -27,7 +27,7 @@
       position: relative;
 
       &::before {
-        content: "";
+        content: '';
         width: 0;
         height: 0;
         border-left: 371px solid transparent;
@@ -118,6 +118,17 @@
       height: 70vh;
       background-size: cover;
       background-position: top right;
+      position: relative;
+
+      &::after {
+        content: '';
+        background: #0c367e2f;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+      }
     }
 
     p{
@@ -141,11 +152,54 @@
 
   }
 
+  .menu-icon {
+    position: absolute;
+    right: 40px;
+    z-index: 9999;
+    top: 40px;
+    display: inline-flex;
+    filter: invert(1);
+  }
+
   .menu {
     background-color: #252d3b;
+    color: #fdfffc;
+    padding: 40px 41px;
+    display: flex;
+    flex-direction: column;
+    gap: 145px;
+    justify-content: center;
+    overflow: hidden;
 
-    .hamburger {
-      filter: invert(1);
+    .menu-items {
+      font-size: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+
+      a {
+        text-orientation: mixed;
+        writing-mode: vertical-lr;
+        padding: 10px 50px 10px 8px;
+        font-size: 10px;
+        font-weight: 600;
+
+        &.active, &:hover {
+          background-color: #2a3444;
+
+          &::before {
+            content: '';
+            width: 65px;
+            height: 1px;
+            display: inline-block;
+            position: absolute;
+            background: #e8eaea;
+            left: -40px;
+            top: 50%;
+            transform: translate(-50%, 0);
+          }
+        }
+      }
     }
   }
 }
