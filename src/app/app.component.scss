@@ -119,7 +119,7 @@
     background-color: #fff;
 
     .profile-pic {
-      background: url('/img/Ricky.jpg');
+      background: url('/img/Ricky.jpg') no-repeat;
       width: 100%;
       height: 70vh;
       background-size: cover;
@@ -189,17 +189,24 @@
     z-index: 9999;
     top: 40px;
     display: inline-flex;
-    filter: invert(1);
+    background: #252d3b;
+    padding: 4px;
+    border-radius: 4px;
+
+    .hamburger {
+      filter: invert(1);
+    }
   }
 
   .menu {
     background-color: #252d3b;
     color: #fdfffc;
-    padding: 40px 41px;
+    padding: 40px 30px;
     display: flex;
     flex-direction: column;
     gap: 145px;
     justify-content: center;
+    align-items: flex-start;
     overflow: hidden;
 
     .menu-items {
@@ -231,6 +238,97 @@
           }
         }
       }
+    }
+  }
+}
+
+@media(max-width: 959px) {
+  .wrap {
+    overflow: hidden;
+    overflow-y: scroll;
+
+    .left {
+      .content {
+        h1 {
+          font-size: 70px !important;
+          line-height: 60px !important;
+        }
+      }
+    }
+
+    .menu {
+      background-color: #252d3b;
+      color: #fdfffc;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 145px;
+      justify-content: center;
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 9;
+      min-width: 58px;
+      height: 100%;
+    }
+
+    .center {
+      .profile-pic {
+        background-size: cover;
+      }
+    }
+    .data {
+      max-width: calc(100vw - 160px);
+    }
+  }
+}
+
+@media(max-width: 599px) {
+  .wrap {
+    .left {
+      padding: 20px;
+
+      .content {
+        h1 {
+          font-size: 50px !important;
+          line-height: 60px !important;
+        }
+      }
+    }
+
+    .menu {
+      .menu-items {
+        a {
+          padding: 10px;
+        }
+      }
+    }
+
+    .menu-icon {
+      right: 20px;
+      top: 20px;
+    }
+
+    .center {
+      .profile-pic {
+        background-size: cover;
+      }
+
+      .data {
+        padding: 20px;
+        max-width: calc(100vw - 80px);
+      }
+    }
+
+    .p40 {
+      padding: 20px;
+      max-width: calc(100vw - 80px);
+    }
+
+    button {
+      min-height: 38px;
+      padding: 8px 26px !important;
     }
   }
 }

@@ -1,6 +1,6 @@
 <div class="wrap">
-  <div fxFlex="100%" flayout="row">
-    <div fxFlex="34%" fxLayout="column" fxLayoutAlign="space-between start" class="left">
+  <div fxFlex="100%" flayout="row" fxLayout.lt-md="column">
+    <div fxFlex="22.3%" fxFlex.lt-md="100%" fxLayout="column" fxLayoutGap="40px" fxLayoutAlign="space-between start" class="left">
       <div class="logo">Ricardo <span>Cortés</span></div>
 
       <div class="content">
@@ -23,11 +23,10 @@
         <p>Junior Web Developer | Passionate About UX & Aesthetics
           <br>I'm a junior web developer with experience in JavaScript, TypeScript, Angular, HTML, and CSS. I love creating intuitive and visually appealing web experiences. Always eager to learn new technologies, my goal is to become a senior full-stack developer. Outside of coding, I enjoy video games and downhill mountain biking.
           <br>Let's build something great together! 🚀</p>
-          <button>Projects</button>
       </div>
       </ng-container>
       <ng-container *ngIf="view === 'isAboutMe'">
-        <div class="p40 data">
+        <div class="p40">
           <h4>ABOUT ME</h4>
           <p>Junior Web Developer | Passionate About UX & Collaborative Growth</p>
           <p>I'm a junior web developer with experience in JavaScript, TypeScript, Angular, HTML, and CSS. As a self-taught programmer, I've worked on a few projects where I focused on creating clean, intuitive, and visually appealing user experiences. I enjoy the challenge of turning ideas into interactive and responsive web applications, always aiming for a balance between aesthetics and functionality.</p>
@@ -63,7 +62,7 @@
         </div>
       </ng-container>
     </div>
-    <div fxFlex="100px" class="menu" *ngIf="isShowMenu">
+    <div fxFlex="100px" fxFlex.lt-md="none" class="menu" *ngIf="isShowMenu">
       <div class="menu-items">
         <a [ngClass]="{ 'active' : view === 'isHome' }" (click)="handleGoToMenu('isHome')">HOME</a>
         <a [ngClass]="{ 'active' : view === 'isAboutMe' }" (click)="handleGoToMenu('isAboutMe')">ABOUT ME</a>
