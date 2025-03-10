@@ -163,6 +163,24 @@
       color: #fff;
       font-weight: 600 ;
     }
+
+    .projects {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      flex-wrap: wrap;
+
+      img {
+        max-width: calc(50% - 20px);
+      }
+    }
+
+    .data {
+      max-height: calc(100vh - 80px);
+      overflow: hidden;
+      overflow-y: scroll;
+    }
+
   }
 
   .menu-icon {

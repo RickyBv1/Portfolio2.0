@@ -27,7 +27,7 @@
       </div>
       </ng-container>
       <ng-container *ngIf="view === 'isAboutMe'">
-        <div class="p40">
+        <div class="p40 data">
           <h4>ABOUT ME</h4>
           <p>Junior Web Developer | Passionate About UX & Collaborative Growth</p>
           <p>I'm a junior web developer with experience in JavaScript, TypeScript, Angular, HTML, and CSS. As a self-taught programmer, I've worked on a few projects where I focused on creating clean, intuitive, and visually appealing user experiences. I enjoy the challenge of turning ideas into interactive and responsive web applications, always aiming for a balance between aesthetics and functionality.</p>
@@ -37,7 +37,21 @@
         </div>
       </ng-container>
       <ng-container *ngIf="view === 'isProjects'">
-        projects
+        <div class="p40 data">
+          <h4>PROJECTS</h4>
+          <div class="projects">
+            <img src="projects/random-roulette.png" alt="" width="100%">
+            <img src="projects/tic-tac-toe.png" alt="" width="100%">
+            <img src="projects/e-commerce.png" alt="" width="100%">
+            <img src="projects/calculator.png" alt="" width="100%">
+            <img src="projects/pong.png" alt="" width="100%">
+            <img src="projects/pokedex.png" alt="" width="100%">
+            <img src="projects/digital-clock.png" alt="" width="100%">
+            <img src="projects/typing-test.png" alt="" width="100%">
+            <img src="projects/login.png" alt="" width="100%">
+            <img src="projects/portfolio.png" alt="" width="100%">
+          </div>
+        </div>
       </ng-container>
       <ng-container *ngIf="view === 'isContact'">
         <div class="p40">
