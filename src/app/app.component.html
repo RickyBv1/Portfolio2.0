@@ -7,7 +7,7 @@
         <h4>HELLO</h4>
         <h1 [ngClass]="{ 'small' : view != 'isHome' }">I'm Ricardo</h1>
         <p>Front-end developer<br>From Ecuador<br>Living in New York</p>
-        <button onclick="window.open('https://mail.google.com/mail/?view=cm&fs=1&to=rickycortes668668@gmail.com&su=Inquiry&body=Hello,%20I%20would%20like%20to%20know%20more%20about...')">
+        <button aria-label="Contact Me" onclick="window.open('https://mail.google.com/mail/?view=cm&fs=1&to=rickycortes668668@gmail.com&su=Inquiry&body=Hello,%20I%20would%20like%20to%20know%20more%20about...')">
           Contact Me
         </button>
 
@@ -127,10 +127,10 @@
     </div>
     <div fxFlex="100px" fxFlex.lt-md="none" class="menu" *ngIf="isShowMenu">
       <div class="menu-items">
-        <a [ngClass]="{ 'active' : view === 'isHome' }" (click)="handleGoToMenu('isHome')">HOME</a>
-        <a [ngClass]="{ 'active' : view === 'isAboutMe' }" (click)="handleGoToMenu('isAboutMe')">ABOUT ME</a>
-        <a [ngClass]="{ 'active' : view === 'isProjects' }" (click)="handleGoToMenu('isProjects')">PROJECTS</a>
-        <a [ngClass]="{ 'active' : view === 'isContact' }" (click)="handleGoToMenu('isContact')">CONTACT</a>
+        <a [ngClass]="{ 'active' : view === View.Home }" (click)="handleGoToMenu(View.Home)">HOME</a>
+        <a [ngClass]="{ 'active' : view === View.AboutMe }" (click)="handleGoToMenu(View.AboutMe)">ABOUT ME</a>
+        <a [ngClass]="{ 'active' : view === View.Projects }" (click)="handleGoToMenu(View.Projects)">PROJECTS</a>
+        <a [ngClass]="{ 'active' : view === View.Contact }" (click)="handleGoToMenu(View.Contact)">CONTACT</a>
       </div>
     </div>
     <a class="menu-icon"><img src="icons/menu.png" alt="menu" class="hamburger" width="30px" (click)="isShowMenu = !isShowMenu"></a>

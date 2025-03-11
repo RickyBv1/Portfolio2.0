@@ -2,6 +2,13 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FlexLayoutModule } from '@ngbracket/ngx-layout';
 
+enum View {
+  Home = 'isHome',
+  AboutMe = 'isAboutMe',
+  Projects = 'isProjects',
+  Contact = 'isContact'
+}
+
 @Component({
   selector: 'app-root',
   imports: [FlexLayoutModule, CommonModule],
@@ -10,12 +17,13 @@ import { FlexLayoutModule } from '@ngbracket/ngx-layout';
 })
 export class AppComponent {
   title = 'Portfolio2.0';
+  isShowMenu: boolean = false;
+  view: View = View.Home;
 
-  isShowMenu:boolean = false;
+  // Expón el enum View para usarlo en la plantilla
+  View = View;
 
-  view = 'isHome';
-  handleGoToMenu(name: any) {
+  handleGoToMenu(name: View) {
     this.view = name;
-
   }
 }
