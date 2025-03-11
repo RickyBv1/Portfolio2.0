@@ -1,11 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { FlexLayoutModule } from '@ngbracket/ngx-layout';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, FlexLayoutModule, CommonModule],
+  imports: [FlexLayoutModule, CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
