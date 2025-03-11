@@ -7,7 +7,10 @@
         <h4>HELLO</h4>
         <h1 [ngClass]="{ 'small' : view != 'isHome' }">I'm Ricardo</h1>
         <p>Front-end developer<br>From Ecuador<br>Living in New York</p>
-        <button>Contact Me</button>
+        <button onclick="window.open('https://mail.google.com/mail/?view=cm&fs=1&to=rickycortes668668@gmail.com&su=Inquiry&body=Hello,%20I%20would%20like%20to%20know%20more%20about...')">
+          Contact Me
+        </button>
+
       </div>
       <div class="social-media">
         <a href="https://github.com/RickyBv1" target="_blank"><img src="icons/github.png" width="24px" alt="github"></a>
@@ -39,16 +42,76 @@
         <div class="p40 data">
           <h4>PROJECTS</h4>
           <div class="projects">
-            <img src="projects/random-roulette.png" alt="" width="100%">
-            <img src="projects/tic-tac-toe.png" alt="" width="100%">
-            <img src="projects/e-commerce.png" alt="" width="100%">
-            <img src="projects/calculator.png" alt="" width="100%">
-            <img src="projects/pong.png" alt="" width="100%">
-            <img src="projects/pokedex.png" alt="" width="100%">
-            <img src="projects/digital-clock.png" alt="" width="100%">
-            <img src="projects/typing-test.png" alt="" width="100%">
-            <img src="projects/login.png" alt="" width="100%">
-            <img src="projects/portfolio.png" alt="" width="100%">
+            <div class="card">
+              <img src="projects/tic-tac-toe.png" alt="" width="100%">
+              <h3>Tic-Tac-Toe Online</h3>
+              <p>Online multiplayer game made with Angular 19, NodeJs and Socket.IO</p>
+              <p>Angular, SCSS, TypeScript, Socket.IO</p>
+              <a href="https://tic-tac-toe-online-ricky.netlify.app/" target="_blank">Watch the repository</a>
+            </div>
+            <div class="card">
+              <img src="projects/e-commerce.png" alt="" width="100%">
+              <h3>E-Commerce</h3>
+              <p>Single page E-Commerce app made with Angular 19 and Typescript</p>
+              <p>Angular, SCSS, TypeScript</p>
+              <a href="https://github.com/RickyBv1/food-delivery" target="_blank">Watch the repository</a>
+            </div>
+            <div class="card">
+              <img src="projects/random-roulette.png" alt="" width="100%">
+              <h3>Random Roulette</h3>
+              <p>Made for random gifts exchanges events like secret santa made with the ionic framework</p>
+              <p>Angular, SCSS, TypeScript, Ionic</p>
+              <a href="https://github.com/RickyBv1/Random-roulette" target="_blank">Watch the repository</a>
+            </div>
+            <div class="card">
+              <img src="projects/pong.png" alt="" width="100%">
+              <h3>Pong game</h3>
+              <p>Retro "Pong" game that can be played in local multiplayer with 2 people or just one person against the CPU</p>
+              <p>HTML, CSS, JavaScript</p>
+              <a href="https://github.com/RickyBv1/Pong" target="_blank">Watch the repository</a>
+            </div>
+            <div class="card">
+              <img src="projects/login.png" alt="" width="100%">
+              <h3>Log In form</h3>
+              <p>log in form made with html, css, Javascript and using NodeJs, dotenv  and express</p>
+              <p>HTML, CSS, JavaScript</p>
+              <a href="https://github.com/RickyBv1/LogIn" target="_blank">Watch the repository</a>
+            </div>
+            <div class="card">
+              <img src="projects/pokedex.png" alt="" width="100%">
+              <h3>Pokedex</h3>
+              <p>Tool that consumes PokeAPI to see the information of different types of pokemons</p>
+              <p>Angular, SCSS, TypeScript, PokeAPI</p>
+              <a href="https://github.com/RickyBv1/Pokedex" target="_blank">Watch the repository</a>
+            </div>
+            <div class="card">
+              <img src="projects/typing-test.png" alt="" width="100%">
+              <h3>Typing test</h3>
+              <p>Typing test that show how fast can you type different words in a minute, and also shows how manny letters you typed and how many mistakes you made</p>
+              <p>HTML, CSS, JavaScript</p>
+              <a href="https://github.com/RickyBv1/Typing-test" target="_blank">Watch the repository</a>
+            </div>
+            <div class="card">
+              <img src="projects/calculator.png" alt="" width="100%">
+              <h3>Calculator</h3>
+              <p>Basic calculator that can be used both by clicking the screen or with the keyboard made with html, css and javascript</p>
+              <p>HTML, CSS, JavaScript</p>
+              <a href="https://github.com/RickyBv1/Calculator" target="_blank">Watch the repository</a>
+            </div>
+            <div class="card">
+              <img src="projects/digital-clock.png" alt="" width="100%">
+              <h3>Digital Clock</h3>
+              <p>Digital clock that shows live the current time of your current time zone made with a seven-segment display</p>
+              <p>HTML, CSS, JavaScript</p>
+              <a href="https://github.com/RickyBv1/Digital-clock" target="_blank">Watch the repository</a>
+            </div>
+            <div class="card">
+              <img src="projects/portfolio.png" alt="" width="100%">
+              <h3>Portfolio V1.0</h3>
+              <p>the first version of my portfolio made with just HTML, CSS, and JavaScript</p>
+              <p>HTML, CSS, JavaScript</p>
+              <a href="https://github.com/RickyBv1/Portfolio" target="_blank">Watch the repository</a>
+            </div>
           </div>
         </div>
       </ng-container>

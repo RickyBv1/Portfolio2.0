@@ -12,7 +12,7 @@ import { FlexLayoutModule } from '@ngbracket/ngx-layout';
 export class AppComponent {
   title = 'Portfolio2.0';
 
-  isShowMenu:boolean = true;
+  isShowMenu:boolean = false;
 
   view = 'isHome';
   handleGoToMenu(name: any) {
