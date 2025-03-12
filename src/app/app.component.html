@@ -5,13 +5,16 @@
       <button class="theme-toggle" (click)="toggleTheme()">
         <img [src]="isDarkMode ? 'icons/sun.png' : 'icons/moon.png'" alt="Theme icon" width="24px">
       </button>
+      <button class="language-toggle" (click)="toggleLanguage()">
+        {{ languageService.getCurrentLanguage() === 'en' ? 'ES' : 'EN' }}
+      </button>
 
       <div class="content">
-        <h4>HELLO</h4>
-        <h1 [ngClass]="{ 'small' : view != 'isHome' }">I'm Ricardo</h1>
-        <p>Front-end developer<br>From Ecuador<br>Living in New York</p>
+        <h4>{{languageService.getTranslation('hello')}}</h4>
+        <h1 [ngClass]="{ 'small' : view != 'isHome' }">{{languageService.getTranslation('im')}}</h1>
+        <p>{{languageService.getTranslation('description')}}</p>
         <button aria-label="Contact Me" onclick="window.open('https://mail.google.com/mail/?view=cm&fs=1&to=rickycortes668668@gmail.com&su=Inquiry&body=Hello,%20I%20would%20like%20to%20know%20more%20about...')">
-          Contact Me
+          {{languageService.getTranslation('contactMeButton')}}
         </button>
 
       </div>
@@ -26,114 +29,47 @@
       <ng-container *ngIf="view === 'isHome'">
         <div class="profile-pic"></div>
       <div class="p40">
-        <p>Junior Web Developer | Passionate About UX & Aesthetics
-          <br>I'm a junior web developer with experience in JavaScript, TypeScript, Angular, HTML, and CSS. I love creating intuitive and visually appealing web experiences. Always eager to learn new technologies, my goal is to become a senior full-stack developer. Outside of coding, I enjoy video games and downhill mountain biking.
-          <br>Let's build something great together! 🚀</p>
+        <p>{{languageService.getTranslation('homeInfo')}}</p>
       </div>
       </ng-container>
       <ng-container *ngIf="view === 'isAboutMe'">
         <div class="p40">
-          <h4>ABOUT ME</h4>
-          <p>Junior Web Developer | Passionate About UX & Collaborative Growth</p>
-          <p>I'm a junior web developer with experience in JavaScript, TypeScript, Angular, HTML, and CSS. As a self-taught programmer, I've worked on a few projects where I focused on creating clean, intuitive, and visually appealing user experiences. I enjoy the challenge of turning ideas into interactive and responsive web applications, always aiming for a balance between aesthetics and functionality.</p>
-          <p>I thrive in collaborative environments, valuing the opportunity to learn from experienced developers while fostering a positive and relaxed workspace. I believe that teamwork and continuous learning are key to professional growth. Although my backend experience is minimal, I'm eager to expand my knowledge and take on new challenges that will help me become a well-rounded full-stack developer.</p>
-          <p>For me, coding should be as enjoyable as it is challenging. While problem-solving and debugging can be tough at times, I believe in making the process fun and engaging. Whether I'm refining UI designs, optimizing performance, or experimenting with new technologies, I approach development with curiosity and enthusiasm.</p>
-          <p>Beyond coding, I'm always looking for new challenges both on and off the screen. I'm passionate about video games, where I enjoy strategy, creativity, and problem-solving in a different way. Additionally, I love downhill mountain biking, pushing my limits while navigating fast descents and technical terrain. Both hobbies fuel my love for challenges, adaptability, and constant improvement—values that I bring into my work as a developer.</p>
+          <h4>{{languageService.getTranslation('aboutMe')}}</h4>
+          <p>{{languageService.getTranslation('aboutMeDescription')}}</p>
         </div>
       </ng-container>
       <ng-container *ngIf="view === 'isProjects'">
         <div class="p40 data">
-          <h4>PROJECTS</h4>
+          <h4>{{languageService.getTranslation('projects')}}</h4>
+
           <div class="projects">
-            <div class="card">
-              <img src="projects/tic-tac-toe.png" alt="" width="100%">
-              <h3>Tic-Tac-Toe Online</h3>
-              <p>Online multiplayer game made with Angular 19, NodeJs and Socket.IO</p>
-              <p>Angular, SCSS, TypeScript, Socket.IO</p>
-              <a href="https://tic-tac-toe-online-ricky.netlify.app/" target="_blank">Watch the repository</a>
-            </div>
-            <div class="card">
-              <img src="projects/e-commerce.png" alt="" width="100%">
-              <h3>E-Commerce</h3>
-              <p>Single page E-Commerce app made with Angular 19 and Typescript</p>
-              <p>Angular, SCSS, TypeScript</p>
-              <a href="https://github.com/RickyBv1/food-delivery" target="_blank">Watch the repository</a>
-            </div>
-            <div class="card">
-              <img src="projects/random-roulette.png" alt="" width="100%">
-              <h3>Random Roulette</h3>
-              <p>Made for random gifts exchanges events like secret santa made with the ionic framework</p>
-              <p>Angular, SCSS, TypeScript, Ionic</p>
-              <a href="https://github.com/RickyBv1/Random-roulette" target="_blank">Watch the repository</a>
-            </div>
-            <div class="card">
-              <img src="projects/pong.png" alt="" width="100%">
-              <h3>Pong game</h3>
-              <p>Retro "Pong" game that can be played in local multiplayer with 2 people or just one person against the CPU</p>
-              <p>HTML, CSS, JavaScript</p>
-              <a href="https://github.com/RickyBv1/Pong" target="_blank">Watch the repository</a>
-            </div>
-            <div class="card">
-              <img src="projects/login.png" alt="" width="100%">
-              <h3>Log In form</h3>
-              <p>log in form made with html, css, Javascript and using NodeJs, dotenv  and express</p>
-              <p>HTML, CSS, JavaScript</p>
-              <a href="https://github.com/RickyBv1/LogIn" target="_blank">Watch the repository</a>
-            </div>
-            <div class="card">
-              <img src="projects/pokedex.png" alt="" width="100%">
-              <h3>Pokedex</h3>
-              <p>Tool that consumes PokeAPI to see the information of different types of pokemons</p>
-              <p>Angular, SCSS, TypeScript, PokeAPI</p>
-              <a href="https://github.com/RickyBv1/Pokedex" target="_blank">Watch the repository</a>
-            </div>
-            <div class="card">
-              <img src="projects/typing-test.png" alt="" width="100%">
-              <h3>Typing test</h3>
-              <p>Typing test that show how fast can you type different words in a minute, and also shows how manny letters you typed and how many mistakes you made</p>
-              <p>HTML, CSS, JavaScript</p>
-              <a href="https://github.com/RickyBv1/Typing-test" target="_blank">Watch the repository</a>
-            </div>
-            <div class="card">
-              <img src="projects/calculator.png" alt="" width="100%">
-              <h3>Calculator</h3>
-              <p>Basic calculator that can be used both by clicking the screen or with the keyboard made with html, css and javascript</p>
-              <p>HTML, CSS, JavaScript</p>
-              <a href="https://github.com/RickyBv1/Calculator" target="_blank">Watch the repository</a>
-            </div>
-            <div class="card">
-              <img src="projects/digital-clock.png" alt="" width="100%">
-              <h3>Digital Clock</h3>
-              <p>Digital clock that shows live the current time of your current time zone made with a seven-segment display</p>
-              <p>HTML, CSS, JavaScript</p>
-              <a href="https://github.com/RickyBv1/Digital-clock" target="_blank">Watch the repository</a>
-            </div>
-            <div class="card">
-              <img src="projects/portfolio.png" alt="" width="100%">
-              <h3>Portfolio V1.0</h3>
-              <p>the first version of my portfolio made with just HTML, CSS, and JavaScript</p>
-              <p>HTML, CSS, JavaScript</p>
-              <a href="https://github.com/RickyBv1/Portfolio" target="_blank">Watch the repository</a>
+            <div *ngFor="let project of getProjectsList()" class="card">
+              <img [src]="getProjectImagePath(project.title)" alt="{{ project.title }}" width="100%">
+              <h3>{{ project.title }}</h3>
+              <p>{{ project.description }}</p>
+              <p>{{ project.technologies }}</p>
+              <a [href]="getProjectLink(project.title)" target="_blank">{{ project.linkText }}</a>
             </div>
           </div>
+
         </div>
       </ng-container>
       <ng-container *ngIf="view === 'isContact'">
         <div class="p40">
-          <h4>CONTACT ME</h4>
+          <h4>{{languageService.getTranslation('contact')}}</h4>
           <p class="mb8 mt20">Email:</p>
           <div><b>rickycortes668668&#64;gmail.com</b></div>
-          <p class="mb8 mt20">Phone number:</p>
+          <p class="mb8 mt20">{{languageService.getTranslation('phoneNumber')}}</p>
           <div><b>+1 516 675 6343</b></div>
         </div>
       </ng-container>
     </div>
     <div fxFlex="100px" fxFlex.lt-md="none" class="menu" *ngIf="isShowMenu">
       <div class="menu-items">
-        <a [ngClass]="{ 'active' : view === View.Home }" (click)="handleGoToMenu(View.Home)">HOME</a>
-        <a [ngClass]="{ 'active' : view === View.AboutMe }" (click)="handleGoToMenu(View.AboutMe)">ABOUT ME</a>
-        <a [ngClass]="{ 'active' : view === View.Projects }" (click)="handleGoToMenu(View.Projects)">PROJECTS</a>
-        <a [ngClass]="{ 'active' : view === View.Contact }" (click)="handleGoToMenu(View.Contact)">CONTACT</a>
+        <a [ngClass]="{ 'active' : view === View.Home }" (click)="handleGoToMenu(View.Home)">{{languageService.getTranslation('home')}}</a>
+        <a [ngClass]="{ 'active' : view === View.AboutMe }" (click)="handleGoToMenu(View.AboutMe)">{{languageService.getTranslation('aboutMe')}}</a>
+        <a [ngClass]="{ 'active' : view === View.Projects }" (click)="handleGoToMenu(View.Projects)">{{languageService.getTranslation('projects')}}</a>
+        <a [ngClass]="{ 'active' : view === View.Contact }" (click)="handleGoToMenu(View.Contact)">{{languageService.getTranslation('contact2')}}</a>
       </div>
     </div>
     <a class="menu-icon"><img src="icons/menu.png" alt="menu" class="hamburger" width="30px" (click)="isShowMenu = !isShowMenu"></a>
