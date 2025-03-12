@@ -19,11 +19,17 @@ export class AppComponent {
   title = 'Portfolio2.0';
   isShowMenu: boolean = false;
   view: View = View.Home;
+  isDarkMode: boolean = false;
 
-  // Expón el enum View para usarlo en la plantilla
   View = View;
 
   handleGoToMenu(name: View) {
     this.view = name;
+  }
+
+  toggleTheme() {
+    this.isDarkMode = !this.isDarkMode;
+    console.log("modo oscuro: ", this.isDarkMode);
+    document.body.classList.toggle('dark-theme', this.isDarkMode);
   }
 }

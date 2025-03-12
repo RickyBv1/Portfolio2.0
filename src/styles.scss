@@ -1,4 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --background-color: #ffffff;
+  --text-color: #414143;
+  --primary-color: #134091;
+  --secondary-color: #0c367e;
+  --menu-color: #252d3b;
+  --whiteish: #fefefe;
+}
+
+body.dark-theme {
+  --background-color: #121212;
+  --text-color: #ffffff;
+  --primary-color: #1e1e1e;
+  --secondary-color: #333;
+  --menu-color: #333;
+  --whiteish: #ffffff;
+}
+
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;

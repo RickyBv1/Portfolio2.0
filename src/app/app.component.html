@@ -2,6 +2,9 @@
   <div fxFlex="100%" flayout="row" fxLayout.lt-md="column">
     <div fxFlex="22.3%" fxFlex.lt-md="100%" fxLayout="column" fxLayoutGap="40px" fxLayoutAlign="space-between start" class="left">
       <div class="logo">Ricardo <span>Cortés</span></div>
+      <button class="theme-toggle" (click)="toggleTheme()">
+        <img [src]="isDarkMode ? 'icons/sun.png' : 'icons/moon.png'" alt="Theme icon" width="24px">
+      </button>
 
       <div class="content">
         <h4>HELLO</h4>
