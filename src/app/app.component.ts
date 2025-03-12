@@ -69,4 +69,8 @@ export class AppComponent {
   getProjectImagePath(title: string): string {
     return 'projects/' + title.toLowerCase().replace(/ /g, '-') + '.png';
   }
+
+  formatText(text: string): string {
+    return text.replace(/\n/g, '<br>');
+  }
 }

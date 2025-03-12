@@ -2,17 +2,18 @@
   <div fxFlex="100%" flayout="row" fxLayout.lt-md="column">
     <div fxFlex="22.3%" fxFlex.lt-md="100%" fxLayout="column" fxLayoutGap="40px" fxLayoutAlign="space-between start" class="left">
       <div class="logo">Ricardo <span>Cortés</span></div>
-      <button class="theme-toggle" (click)="toggleTheme()">
-        <img [src]="isDarkMode ? 'icons/sun.png' : 'icons/moon.png'" alt="Theme icon" width="24px">
-      </button>
-      <button class="language-toggle" (click)="toggleLanguage()">
-        {{ languageService.getCurrentLanguage() === 'en' ? 'ES' : 'EN' }}
-      </button>
-
+      <div class="button-container">
+        <button class="theme-toggle" (click)="toggleTheme()">
+          <img [src]="isDarkMode ? 'icons/sun.png' : 'icons/moon.png'" alt="Theme icon" width="24px">
+        </button>
+        <button class="language-toggle" (click)="toggleLanguage()">
+          {{ languageService.getCurrentLanguage() === 'en' ? 'ES' : 'EN' }}
+        </button>
+      </div>
       <div class="content">
         <h4>{{languageService.getTranslation('hello')}}</h4>
         <h1 [ngClass]="{ 'small' : view != 'isHome' }">{{languageService.getTranslation('im')}}</h1>
-        <p>{{languageService.getTranslation('description')}}</p>
+        <p [innerHTML]="formatText(languageService.getTranslation('description'))">{{languageService.getTranslation('description')}}</p>
         <button aria-label="Contact Me" onclick="window.open('https://mail.google.com/mail/?view=cm&fs=1&to=rickycortes668668@gmail.com&su=Inquiry&body=Hello,%20I%20would%20like%20to%20know%20more%20about...')">
           {{languageService.getTranslation('contactMeButton')}}
         </button>
@@ -29,13 +30,13 @@
       <ng-container *ngIf="view === 'isHome'">
         <div class="profile-pic"></div>
       <div class="p40">
-        <p>{{languageService.getTranslation('homeInfo')}}</p>
+        <p [innerHTML]="formatText(languageService.getTranslation('homeInfo'))">{{languageService.getTranslation('homeInfo')}}</p>
       </div>
       </ng-container>
       <ng-container *ngIf="view === 'isAboutMe'">
         <div class="p40">
           <h4>{{languageService.getTranslation('aboutMe')}}</h4>
-          <p>{{languageService.getTranslation('aboutMeDescription')}}</p>
+          <p [innerHTML]="formatText(languageService.getTranslation('aboutMeDescription'))">{{languageService.getTranslation('aboutMeDescription')}}</p>
         </div>
       </ng-container>
       <ng-container *ngIf="view === 'isProjects'">
