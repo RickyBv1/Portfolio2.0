@@ -1,0 +1,9 @@
+[build]
+  command = "ng build --configuration production"
+  publish = "dist/portfolio2.0/browser"
+
+[build.environment]
+  NODE_VERSION = "16"
+
+[[plugins]]
+  package = "@netlify/angular-runtime"
