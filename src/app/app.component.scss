@@ -109,7 +109,7 @@
       }
 
       p {
-        font-size: 26px;
+        font-size: 20px;
         font-weight: 600;
         margin-bottom: 20px;
         line-height: 24px;
@@ -190,19 +190,20 @@
       display: flex;
       flex-direction: row;
       gap: 20px;
-      justify-content: space-between;
+      justify-content: flex-start;
       flex-wrap: wrap;
 
       .card {
         background-color: var(--primary-color);
-        flex-basis: 314px;
-        flex-grow: 1;
-        flex-shrink: 1;
+        flex-basis: calc(33.333% - 20px);
+        flex-grow: 0;
+        flex-shrink: 0;
         display: flex;
         flex-direction: column;
         box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
         overflow: hidden;
         border-radius: 5px;
+        min-width: 250px;
 
         img {
           height: 150px;
@@ -258,13 +259,25 @@
   .menu {
     background-color: var(--menu-color);
     color: var(--whiteish);
-    padding: 40px 30px;
+    padding: 40px 20px;
     display: flex;
     flex-direction: column;
     gap: 145px;
     justify-content: center;
     align-items: flex-start;
     overflow: hidden;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    bottom: 0;
+    z-index: 9;
+    min-width: 58px;
+    height: 100%;
+    transition: right 0.4s ease-in-out;
+
+    &.menu-visible {
+      right: 0;
+    }
 
     .menu-items {
       font-size: 12px;
@@ -323,16 +336,27 @@
       justify-content: center;
       position: fixed;
       top: 0;
-      right: 0;
+      right: -300px;
       bottom: 0;
       z-index: 9;
       min-width: 58px;
       height: 100%;
+      transition: right 0.4s ease-in-out;
+
+      &.menu-visible {
+        right: 0;
+      }
     }
 
     .center {
       .profile-pic {
         background-size: cover;
+      }
+
+      .projects {
+        .card {
+          flex-basis: calc(50% - 20px);
+        }
       }
     }
 
@@ -376,6 +400,12 @@
       .data {
         padding: 20px;
         max-width: calc(100vw - 80px);
+      }
+
+      .projects {
+        .card {
+          flex-basis: 100%;
+        }
       }
     }
 

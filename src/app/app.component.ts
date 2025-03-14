@@ -50,12 +50,12 @@ export class AppComponent {
       "Tic-Tac-Toe Online": "https://tic-tac-toe-online-ricky.netlify.app/",
       "E-Commerce": "https://github.com/RickyBv1/food-delivery",
       "Random Roulette": "https://github.com/RickyBv1/Random-roulette",
-      "Pong game": "https://github.com/RickyBv1/Pong",
+      "Pong game": "https://rickybv1.github.io/Pong/",
       "Log In form": "https://github.com/RickyBv1/LogIn",
       "Pokedex": "https://github.com/RickyBv1/Pokedex",
-      "Typing test": "https://github.com/RickyBv1/Typing-test",
-      "Calculator": "https://github.com/RickyBv1/Calculator",
-      "Digital Clock": "https://github.com/RickyBv1/Digital-clock",
+      "Typing test": "https://rickybv1.github.io/Typing-test/",
+      "Calculator": "https://rickybv1.github.io/Calculator/",
+      "Digital Clock": "https://rickybv1.github.io/Digital-clock/",
       "Portfolio V1.0": "https://github.com/RickyBv1/Portfolio",
     };
     return projectLinks[title] || "#";

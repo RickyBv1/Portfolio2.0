@@ -17,7 +17,6 @@
         <button aria-label="Contact Me" onclick="window.open('https://mail.google.com/mail/?view=cm&fs=1&to=rickycortes668668@gmail.com&su=Inquiry&body=Hello,%20I%20would%20like%20to%20know%20more%20about...')">
           {{languageService.getTranslation('contactMeButton')}}
         </button>
-
       </div>
       <div class="social-media">
         <a href="https://github.com/RickyBv1" target="_blank"><img src="icons/github.png" width="24px" alt="github"></a>
@@ -29,9 +28,9 @@
     <div fxFlex="100%" class="center">
       <ng-container *ngIf="view === 'isHome'">
         <div class="profile-pic"></div>
-      <div class="p40">
-        <p [innerHTML]="formatText(languageService.getTranslation('homeInfo'))">{{languageService.getTranslation('homeInfo')}}</p>
-      </div>
+        <div class="p40">
+          <p [innerHTML]="formatText(languageService.getTranslation('homeInfo'))">{{languageService.getTranslation('homeInfo')}}</p>
+        </div>
       </ng-container>
       <ng-container *ngIf="view === 'isAboutMe'">
         <div class="p40">
@@ -42,7 +41,6 @@
       <ng-container *ngIf="view === 'isProjects'">
         <div class="p40 data">
           <h4>{{languageService.getTranslation('projects')}}</h4>
-
           <div class="projects">
             <div *ngFor="let project of getProjectsList()" class="card">
               <img [src]="getProjectImagePath(project.title)" alt="{{ project.title }}" width="100%">
@@ -52,7 +50,6 @@
               <a [href]="getProjectLink(project.title)" target="_blank">{{ project.linkText }}</a>
             </div>
           </div>
-
         </div>
       </ng-container>
       <ng-container *ngIf="view === 'isContact'">
@@ -65,7 +62,8 @@
         </div>
       </ng-container>
     </div>
-    <div fxFlex="100px" fxFlex.lt-md="none" class="menu" *ngIf="isShowMenu">
+    <!-- Menú siempre en el DOM, pero oculto visualmente -->
+    <div class="menu" [class.menu-visible]="isShowMenu">
       <div class="menu-items">
         <a [ngClass]="{ 'active' : view === View.Home }" (click)="handleGoToMenu(View.Home)">{{languageService.getTranslation('home')}}</a>
         <a [ngClass]="{ 'active' : view === View.AboutMe }" (click)="handleGoToMenu(View.AboutMe)">{{languageService.getTranslation('aboutMe')}}</a>
