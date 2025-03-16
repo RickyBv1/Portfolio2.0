@@ -11,7 +11,7 @@ export const translations: TranslationData = {
   en: {
     hello: "HELLO",
     im: "I'm Ricardo",
-    description: `Front-end developer<br>From Ecuador<br>Living in New York`,
+    description: `Front-end developer<br>Quito, Ecuador`,
     contactMeButton: "Contact Me",
     home: "HOME",
     homeInfo: `Junior Web Developer | Passionate About UX & Aesthetics
@@ -100,7 +100,7 @@ Beyond coding, I'm always looking for new challenges both on and off the screen.
   es: {
     hello: "HOLA",
     im: "Soy Ricardo",
-    description: `Desarrollador Front-end<br>De Ecuador<br>Viviendo en New York`,
+    description: `Desarrollador Front-end<br>Quito, Ecuador`,
     contactMeButton: "Contactame",
     home: "INICIO",
     homeInfo: `Desarrollador Web Junior | Apasionado por la UX y la Estética
