@@ -41,6 +41,12 @@ Beyond coding, I'm always looking for new challenges both on and off the screen.
         linkText: "Watch the project",
       },
       {
+        title: "Tic-Tac-Toe React",
+        description: "Local multiplayer game made with React 18",
+        technologies: "React, CSS, JavaScript",
+        linkText: "Watch the project",
+      },
+      {
         title: "E-Commerce",
         description: "Single page E-Commerce app made with Angular 19 and Typescript",
         technologies: "Angular, SCSS, TypeScript",
@@ -127,6 +133,12 @@ Más allá del código, siempre busco nuevos retos dentro y fuera de la pantalla
         title: "Tic-Tac-Toe Online",
         description: "Juego multijugador en linea hecho con Angular 19, NodeJs y Socket.IO",
         technologies: "Angular, SCSS, TypeScript, Socket.IO",
+        linkText: "Mira el proyecto",
+      },
+      {
+        title: "Tic-Tac-Toe React",
+        description: "Juego multijugador local hecho con React 18",
+        technologies: "React, CSS, JavaScript",
         linkText: "Mira el proyecto",
       },
       {

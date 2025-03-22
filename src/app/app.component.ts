@@ -48,6 +48,7 @@ export class AppComponent {
   getProjectLink(title: string): string {
     const projectLinks: ProjectLinks = {
       "Tic-Tac-Toe Online": "https://tic-tac-toe-online-ricky.netlify.app/",
+      "Tic-Tac-Toe React": "https://rickytictactoereact.netlify.app/",
       "E-Commerce": "https://github.com/RickyBv1/food-delivery",
       "Random Roulette": "https://github.com/RickyBv1/Random-roulette",
       "Pong game": "https://rickybv1.github.io/Pong/",
