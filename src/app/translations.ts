@@ -15,7 +15,7 @@ export const translations: TranslationData = {
     contactMeButton: "Contact Me",
     home: "HOME",
     homeInfo: `Junior Web Developer | Passionate About UX & Aesthetics
-<br>I'm a junior web developer with experience in JavaScript, TypeScript, Angular, HTML, and CSS. I love creating intuitive and visually appealing web experiences. Always eager to learn new technologies, my goal is to become a senior full-stack developer. <br>Outside of coding, I enjoy video games and downhill mountain biking.
+<br>I'm a junior web developer with experience in JavaScript, TypeScript, Angular, React, HTML, and CSS. I love creating intuitive and visually appealing web experiences. Always eager to learn new technologies, my goal is to become a senior full-stack developer. <br>Outside of coding, I enjoy video games and downhill mountain biking.
 <br>Let's build something great together! 🚀`,
     aboutMe: "ABOUT ME",
     aboutMeDescription: `Junior Web Developer | Passionate About UX & Collaborative Growth
@@ -110,12 +110,12 @@ Beyond coding, I'm always looking for new challenges both on and off the screen.
     contactMeButton: "Contactame",
     home: "INICIO",
     homeInfo: `Desarrollador Web Junior | Apasionado por la UX y la Estética
-<br>Soy un desarrollador web junior con experiencia en JavaScript, TypeScript, Angular, HTML y CSS. Me encanta crear experiencias web intuitivas y visualmente atractivas. Siempre con ganas de aprender nuevas tecnologías, mi objetivo es convertirme en un desarrollador full-stack senior.<br>Fuera del mundo del código, disfruto de los videojuegos y el downhill.
+<br>Soy un desarrollador web junior con experiencia en JavaScript, TypeScript, Angular, React, HTML y CSS. Me encanta crear experiencias web intuitivas y visualmente atractivas. Siempre con ganas de aprender nuevas tecnologías, mi objetivo es convertirme en un desarrollador full-stack senior.<br>Fuera del mundo del código, disfruto de los videojuegos y el downhill.
 <br>¡Construyamos algo increíble juntos! 🚀`,
     aboutMe: "SOBRE MÍ",
     aboutMeDescription: `Desarrollador Web Junior | Apasionado por la UX y el Crecimiento Colaborativo
 <br>
-Soy un desarrollador web junior con experiencia en JavaScript, TypeScript, Angular, HTML y CSS. Como programador autodidacta, he trabajado en varios proyectos en los que me he centrado en crear experiencias de usuario limpias, intuitivas y visualmente atractivas. Disfruto el desafío de convertir ideas en aplicaciones web interactivas y responsivas, siempre buscando un equilibrio entre estética y funcionalidad.
+Soy un desarrollador web junior con experiencia en JavaScript, TypeScript, Angular, React, HTML y CSS. Como programador autodidacta, he trabajado en varios proyectos en los que me he centrado en crear experiencias de usuario limpias, intuitivas y visualmente atractivas. Disfruto el desafío de convertir ideas en aplicaciones web interactivas y responsivas, siempre buscando un equilibrio entre estética y funcionalidad.
 <br>
 Me desenvuelvo mejor en entornos colaborativos, valorando la oportunidad de aprender de desarrolladores con más experiencia mientras promuevo un ambiente de trabajo positivo y relajado. Creo firmemente que el trabajo en equipo y el aprendizaje continuo son clave para el crecimiento profesional. Aunque mi experiencia en el backend es limitada, estoy ansioso por ampliar mis conocimientos y asumir nuevos desafíos que me ayuden a convertirme en un desarrollador full-stack completo.
 <br>
