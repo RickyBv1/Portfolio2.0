@@ -71,9 +71,15 @@ Beyond coding, I'm always looking for new challenges both on and off the screen.
         linkText: "Watch the repository",
       },
       {
+        title: "To do app React",
+        description: "To do app made with React 18, that allows you to add, edit and delete tasks",
+        technologies: "React, CSS, TypeScript",
+        linkText: "Watch the repository",
+      },
+      {
         title: "Pokedex",
         description: "Tool that consumes PokeAPI to see the information of different types of pokemons",
-        technologies: "Angular, SCSS, TypeScript, Ionic",
+        technologies: "Angular, SCSS, TypeScript",
         linkText: "Watch the repository",
       },
       {
@@ -166,9 +172,15 @@ Más allá del código, siempre busco nuevos retos dentro y fuera de la pantalla
         linkText: "Mira el repositorio",
       },
       {
+        title: "To do app React",
+        description: "Aplicación de tareas hecha con React 18, que te permite agregar, editar y eliminar tareas",
+        technologies: "React, CSS, TypeScript",
+        linkText: "Mira el repositorio",
+      },
+      {
         title: "Pokedex",
         description: "Herramienta que consume la PokeAPI para ver la información de distintos tipos de Pokémon",
-        technologies: "Angular, SCSS, TypeScript, Ionic",
+        technologies: "Angular, SCSS, TypeScript",
         linkText: "Mira el repositorio",
       },
       {
