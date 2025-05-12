@@ -125,6 +125,11 @@
         color: var(--whiteish);
         padding: 14px 50px;
         font-weight: 700;
+
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.1);
+          transform: translateX(5px);
+        }
       }
 
       .download-cv {
@@ -139,11 +144,6 @@
         display: block;
         cursor: pointer;
         transition: all 0.3s ease;
-
-        &:hover {
-          background-color: rgba(255, 255, 255, 0.1);
-          transform: translateX(5px);
-        }
       }
     }
 
