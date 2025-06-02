@@ -86,7 +86,6 @@ export class AppComponent {
   formatText(text: string): string {
     return text.replace(/\n/g, '<br>');
   }
-
   downloadCV() {
     const cvPath = 'cv/CV.pdf';
     const link = document.createElement('a');
@@ -95,4 +94,11 @@ export class AppComponent {
     link.target = '_blank';
     link.click();
   }
+
+  // goToLinkedIn() {
+  //   window.open(
+  //     'https://www.linkedin.com/in/ricardo-cortes-b29739179/',
+  //     '_blank'
+  //   );
+  // }
 }
